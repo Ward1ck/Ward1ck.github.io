@@ -1,0 +1,108 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ward1ck — Portfolio</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #0f172a;
+            color: #f8fafc;
+            font-family: Arial, sans-serif;
+        }
+
+        .card {
+            width: 90%;
+            max-width: 500px;
+            padding: 40px;
+            text-align: center;
+            background: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 20px;
+            box-shadow: 0 20px 50px #0004;
+        }
+
+        .avatar {
+            font-size: 60px;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            margin: 0 0 10px;
+            font-size: 32px;
+        }
+
+        p {
+            color: #94a3b8;
+            line-height: 1.6;
+        }
+
+        .status {
+            color: #4ade80;
+            margin: 25px 0;
+        }
+
+        button {
+            padding: 14px 25px;
+            border: none;
+            border-radius: 10px;
+            background: #6366f1;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        button:hover {
+            background: #818cf8;
+            transform: translateY(-2px);
+        }
+
+        #result {
+            margin-top: 20px;
+            color: #4ade80;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <div class="avatar">👨‍💻</div>
+
+        <h1>Привет! Я Евгений</h1>
+
+        <p>
+            Разработчик программного обеспечения.
+            Добро пожаловать на мой сайт-портфолио!
+        </p>
+
+        <div class="status">
+            ● GitHub Pages работает
+        </div>
+
+        <button onclick="testJS()">
+            Проверить JavaScript
+        </button>
+
+        <div id="result"></div>
+    </div>
+
+    <script>
+        function testJS() {
+            document.getElementById("result").textContent =
+                "✅ JavaScript успешно работает!";
+        }
+    </script>
+
+</body>
+</html>
