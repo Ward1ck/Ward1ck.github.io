@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ward1ck — Portfolio</title>
+    <meta name="description" content="Портфолио студента-разработчика: проекты, достижения, контакты.">
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        // Применяем тему до отрисовки, чтобы не было мигания
+        try {
+            const saved = localStorage.getItem("theme");
+            if (saved) document.documentElement.dataset.theme = saved;
+        } catch (e) {}
+    </script>
+</head>
+<body>
+
+    <header class="header">
+        <nav class="nav container">
+            <a href="#top" class="logo" id="logo"></a>
+            <div class="nav-links">
+                <a href="#about">Обо мне</a>
+                <a href="#projects">Проекты</a>
+                <a href="#achievements">Достижения</a>
+                <a href="#contacts">Контакты</a>
+            </div>
+            <button class="theme-toggle" id="themeToggle" aria-label="Сменить тему">◐</button>
+        </nav>
+    </header>
+
+    <main id="top">
+        <section class="hero container">
+            <div class="avatar">👨‍💻</div>
+            <h1 id="heroTitle"></h1>
+            <p class="hero-subtitle" id="heroSubtitle"></p>
+            <ul class="facts" id="facts"></ul>
+            <div class="hero-actions">
+                <a href="#projects" class="btn">Мои работы</a>
+                <a href="#contacts" class="btn btn-ghost">Связаться</a>
+            </div>
+        </section>
+
+        <section class="section container" id="about">
+            <h2>Обо мне</h2>
+            <p class="about-text" id="aboutText"></p>
+            <h3>Навыки</h3>
+            <ul class="chips" id="skills"></ul>
+        </section>
+
+        <section class="section container" id="projects">
+            <h2>Проекты</h2>
+            <div class="filters" id="projectFilters"></div>
+            <div class="grid" id="projectGrid"></div>
+        </section>
+
+        <section class="section container" id="achievements">
+            <h2>Достижения</h2>
+            <div class="filters" id="achievementFilters"></div>
+            <div class="grid" id="achievementGrid"></div>
+        </section>
+
+        <section class="section container" id="contacts">
+            <h2>Контакты</h2>
+            <div class="contacts" id="contactList"></div>
+        </section>
+    </main>
+
+    <footer class="footer container" id="footer"></footer>
+
+    <dialog class="viewer" id="viewer">
+        <div class="viewer-head">
+            <strong id="viewerTitle"></strong>
+            <button class="viewer-close" id="viewerClose" aria-label="Закрыть">✕</button>
+        </div>
+        <div class="viewer-body" id="viewerBody"></div>
+        <div class="viewer-foot" id="viewerFoot"></div>
+    </dialog>
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
