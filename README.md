@@ -2,7 +2,7 @@
 
 Персональный сайт-портфолио студента-разработчика: обо мне, мои проекты, сертификаты и достижения.
 
-🔗 **Сайт:** https://ward1ck.github.io/about-me-github/
+🔗 **Сайт:** https://ward1ck.github.io/
 
 ## О сайте
 
@@ -42,8 +42,8 @@ HTML, CSS, JavaScript без фреймворков, сборщиков и за�
 ## Запуск локально
 
 ```bash
-git clone https://github.com/Ward1ck/about-me-github.git
-cd about-me-github
+git clone https://github.com/Ward1ck/Ward1ck.github.io.git
+cd Ward1ck.github.io
 python3 -m http.server 8000
 ```
 
